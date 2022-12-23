@@ -28,7 +28,7 @@ div
 
 button
 {
-    background-color: #f1f1f1; color: gray;  border:none;
+    background-color: transparent; color: gray;  border:none;
     padding-right: 5px;
     margin-right: 10px;
 }
