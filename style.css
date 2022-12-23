@@ -1,0 +1,44 @@
+*, *::before, *::after
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: "Open Sans";
+    color: white;
+
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+body
+{
+    
+    display: flex;
+
+}
+
+div
+{
+    position: absolute; 
+    left: 50vw;
+    transform: translate(-50%, 0);
+    bottom: 45px;
+}
+
+button
+{
+    background-color: #f1f1f1; color: gray;  border:none;
+    padding-right: 5px;
+    margin-right: 10px;
+}
+
+ .js
+{
+    /* border-right: gray solid 1px; */
+    margin-right: 40px;
+}
+/* .html
+{
+    border-left: gray solid 0.5px;
+}  */
