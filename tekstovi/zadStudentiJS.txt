@@ -1,0 +1,81 @@
+var myData;
+var htmlDataContainer;
+$(document).ready(function () {
+  var showByPassed = document.getElementById("showByPassed");
+  var checkboxObojiti = document.getElementById("oboj");
+  WriteData();
+
+  showByPassed.onchange = function () {
+    var markupToWrite = "";
+    htmlDataContainer.innerHTML = "";
+    if (showByPassed.checked) {
+      for (var i = 0; i < myData.length; i++) {
+        if (myData[i].polozeniKolokvijumi >= 3) {
+          markupToWrite += MarkUp(myData[i]);
+        }
+      }
+    } else {
+      for (var i = 0; i < myData.length; i++) {
+        markupToWrite += MarkUp(myData[i]);
+      }
+    }
+    htmlDataContainer.innerHTML = markupToWrite;
+  };
+
+  checkboxObojiti.onchange = function () {
+    var kartice = document.querySelectorAll("#kartice .kartica .card-header");
+    for (var i = 0; i < kartice.length; i++) {
+      if (myData[i].polozeniKolokvijumi >= 3) {
+        kartice[i].style.backgroundColor = "green";
+      }
+    }
+  };
+});
+
+function WriteData() {
+  htmlDataContainer = document.getElementById("kartice");
+  var markupToWrite = "";
+
+  fetch("./db.json")
+    .then((response) => response.json())
+    .then((myJSON) => {
+      //console.log(myJSON);
+      myData = myJSON.polozeniIspiti;
+      for (var i = 0; i < myData.length; i++) {
+        markupToWrite += MarkUp(myData[i]);
+      }
+      htmlDataContainer.innerHTML = markupToWrite;
+    });
+}
+
+function MarkUp(element) {
+  return `
+  <div class="col-12 col-md-6 col-lg-4 mt-3 kartica">
+        <div class="card text-center h-100">
+            <div class="card-header text-uppercase">
+                <h3>${element.id}. ${element.ime}</h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Polozeni kolokvijumi
+                        <span class="badge badge-primary ${
+                          element.polozeniKolokvijumi >= 3
+                            ? "bg-primary"
+                            : "bg-danger"
+                        } badge-pill">${element.polozeniKolokvijumi}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Ukupno bodova
+                    <span class="badge badge-primary badge-pill">${
+                      element.ukupnoBodova
+                    }</span>
+                    </li> 
+                </ul>
+            </div>
+            <div class="card-footer text-muted text-center">
+                Informacije o studentu
+            </div>
+        </div>
+    </div>`;
+}
