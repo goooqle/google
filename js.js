@@ -1,3 +1,15 @@
+function htmlZadStudenti() {
+    fetch('./tekstovi/zadStudentiHTML.txt')
+        .then(response => response.text())
+        .then(text => navigator.clipboard.writeText(text));
+} 
+
+function jsZadStudenti() {
+    fetch('./tekstovi/zadStudentiJS.txt')
+        .then(response => response.text())
+        .then(text => navigator.clipboard.writeText(text));
+} 
+//
 function htmlZad1() {
     fetch('./tekstovi/zad1html.txt')
         .then(response => response.text())
