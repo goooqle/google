@@ -1,0 +1,36 @@
+$(document).ready(function(){
+  fetch('https://jsonplaceholder.typicode.com/todos/')
+  .then((response)=>{
+      return response.json();
+  })
+  .then((MyJson)=>{
+      var tableData=" ";
+      var todoTable=document.getElementById("todoTable");
+      $.each(MyJson,function(index,todoItem){
+          tableData+=`
+          <div class="col col-md-3 col-sm-6 my-3">
+          <div class="card text-center">
+          
+            UserId: ${todoItem.userId}
+          
+          <div class="card-body">
+              <div class="card">
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">ID: ${todoItem.id}</li>
+                  <li class="list-group-item">Title: ${todoItem.title}</li>
+                  <li class="list-group-item">${todoItem.completed}</li>
+              </ul>
+        </div>
+            
+          </div>
+          <div class="card-footer text-muted">
+            Uplatiti do: 06.01.2022. godine
+          </div>
+        </div>
+        </div>
+
+          `
+      })
+      todoTable.innerHTML=tableData;
+  })
+})
