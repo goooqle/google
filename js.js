@@ -1,84 +1,116 @@
-function htmlZadStudenti() {
+// STUDENTI
+function zadStudentiHTML() {
     fetch('./tekstovi/zadStudentiHTML.txt')
         .then(response => response.text())
         .then(text => navigator.clipboard.writeText(text));
 } 
 
-function jsZadStudenti() {
+function zadStudentiJS() {
     fetch('./tekstovi/zadStudentiJS.txt')
         .then(response => response.text())
         .then(text => navigator.clipboard.writeText(text));
 } 
-//
-function htmlZad1() {
-    fetch('./tekstovi/zad1html.txt')
+
+// KARTICE
+function zadKarticeHTML() {
+    fetch('./tekstovi/zadKarticeHTML.txt')
         .then(response => response.text())
         .then(text => navigator.clipboard.writeText(text));
 } 
 
-function jsZad1() {
-    fetch('./tekstovi/zad1js.txt')
-        .then(response => response.text())
-        .then(text => navigator.clipboard.writeText(text));
-} 
-//
-function htmlZad2() {
-    fetch('./tekstovi/zad2html.txt')
+function zadKarticeJS() {
+    fetch('./tekstovi/zadKarticeJS.txt')
         .then(response => response.text())
         .then(text => navigator.clipboard.writeText(text));
 } 
 
-function jsZad2() {
-    fetch('./tekstovi/zad2js.txt')
-        .then(response => response.text())
-        .then(text => navigator.clipboard.writeText(text));
-} 
-//
-function htmlZad3() {
-    fetch('./tekstovi/zad3html.txt')
+// REDOVI
+function zadRedoviHTML() {
+    fetch('./tekstovi/zadRedoviHTML.txt')
         .then(response => response.text())
         .then(text => navigator.clipboard.writeText(text));
 } 
 
-function jsZad3() {
-    fetch('./tekstovi/zad3js.txt')
-        .then(response => response.text())
-        .then(text => navigator.clipboard.writeText(text));
-} 
-//
-function htmlZad4() {
-    fetch('./tekstovi/zad4html.txt')
+function zadRedoviJS() {
+    fetch('./tekstovi/zadRedoviJS.txt')
         .then(response => response.text())
         .then(text => navigator.clipboard.writeText(text));
 } 
 
-function jsZad4() {
-    fetch('./tekstovi/zad4js.txt')
-        .then(response => response.text())
-        .then(text => navigator.clipboard.writeText(text));
-} 
-//
-function htmlZad5() {
-    fetch('./tekstovi/zad5html.txt')
+// KARTICE SA FILTERIMA
+function zadKarticeSaFilterimaHTML() {
+    fetch('./tekstovi/zadKarticeSaFilterimaHTML.txt')
         .then(response => response.text())
         .then(text => navigator.clipboard.writeText(text));
 } 
 
-function jsZad5() {
-    fetch('./tekstovi/zad5js.txt')
-        .then(response => response.text())
-        .then(text => navigator.clipboard.writeText(text));
-} 
-//
-function htmlZad6() {
-    fetch('./tekstovi/zad6html.txt')
+function zadKarticeSaFilterimaJS() {
+    fetch('./tekstovi/zadKarticeSaFilterimaJS.txt')
         .then(response => response.text())
         .then(text => navigator.clipboard.writeText(text));
 } 
 
-function jsZad6() {
-    fetch('./tekstovi/zad6js.txt')
+// KARTICE SA RADIO BUTTON
+function zadKarticeSaRadioButtonHTML() {
+    fetch('./tekstovi/zadKarticeSaRadioButtonHTML.txt')
         .then(response => response.text())
         .then(text => navigator.clipboard.writeText(text));
 } 
-//
+
+function zadKarticeSaRadioButtonJS() {
+    fetch('./tekstovi/zadKarticeSaRadioButtonJS.txt')
+        .then(response => response.text())
+        .then(text => navigator.clipboard.writeText(text));
+}
+
+// NBA
+function zadNBA_HTML() {
+    fetch('./tekstovi/zadNBA_HTML.txt')
+        .then(response => response.text())
+        .then(text => navigator.clipboard.writeText(text));
+} 
+
+function zadNBA_JS() {
+    fetch('./tekstovi/zadNBA_JS.txt')
+        .then(response => response.text())
+        .then(text => navigator.clipboard.writeText(text));
+} 
+
+// FORMA I KARTICE
+function zadFormaPlusKarticeHTML() {
+    fetch('./tekstovi/zadFormaPlusKarticeHTML.txt')
+        .then(response => response.text())
+        .then(text => navigator.clipboard.writeText(text));
+} 
+
+function zadFormaPlusKarticeJS() {
+    fetch('./tekstovi/zadFormaPlusKarticeJS.txt')
+        .then(response => response.text())
+        .then(text => navigator.clipboard.writeText(text));
+} 
+
+// KARTICE SA BOJAMA
+function zadKarticeSaBojamaHTML() {
+    fetch('./tekstovi/zadKarticeSaBojamaHTML.txt')
+        .then(response => response.text())
+        .then(text => navigator.clipboard.writeText(text));
+} 
+
+function zadKarticeSaBojamaJS() {
+    fetch('./tekstovi/zadKarticeSaBojamaJS.txt')
+        .then(response => response.text())
+        .then(text => navigator.clipboard.writeText(text));
+} 
+
+// STRUJA
+function zadStrujaHTML() {
+    fetch('./tekstovi/zadStrujaHTML.txt')
+        .then(response => response.text())
+        .then(text => navigator.clipboard.writeText(text));
+} 
+
+function zadStrujaJS() {
+    fetch('./tekstovi/zadStrujaJS.txt')
+        .then(response => response.text())
+        .then(text => navigator.clipboard.writeText(text));
+} 
